@@ -34,8 +34,8 @@ class Searchbar extends Component {
     return (
       <Header>
         <SearchForm onSubmit={this.handleSubmit}>
-          <SearchButton type="submit">
-            <BiSearch size={20} />
+          <SearchButton type="submit" aria-label="search">
+            <BiSearch size={24} />
           </SearchButton>
 
           <SearchInput

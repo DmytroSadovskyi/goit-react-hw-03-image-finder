@@ -33,7 +33,7 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  display: inline-block;
+  display: block;
   width: 48px;
   height: 48px;
   border: none;

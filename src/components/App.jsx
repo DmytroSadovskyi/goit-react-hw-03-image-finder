@@ -2,7 +2,7 @@ import { Component } from 'react';
 import Searchbar from './Searchbar';
 import ShowImages from './ShowImages';
 import ScrollToTop from 'react-scroll-up';
-import Container from './Container/Container';
+import Container from './Container';
 import { ToastContainer } from 'react-toastify';
 
 export default class App extends Component {
