@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Header, SearchInput, SearchButton } from './Searchbar.styled';
 import PropTypes from 'prop-types';
-import { FaSearch } from 'react-icons/fa';
+import { BiSearch } from 'react-icons/bi';
 class Searchbar extends Component {
   state = {
     query: '',
@@ -30,7 +30,7 @@ class Searchbar extends Component {
       <Header>
         <form onSubmit={this.handleSubmit}>
           <SearchButton type="submit">
-            <FaSearch />
+            <BiSearch size={20} />
           </SearchButton>
 
           <SearchInput

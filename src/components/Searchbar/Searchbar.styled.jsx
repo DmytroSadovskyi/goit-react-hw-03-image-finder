@@ -11,15 +11,19 @@ export const Header = styled.header`
 `;
 
 export const SearchInput = styled.input`
-  height: 40px;
   width: 250px;
   border: none;
+  font-size: 20px;
 `;
 
 export const SearchButton = styled.button`
-  height: 40px;
-  width: 40px;
+  height: 48px;
+  width: 48px;
   border: none;
   background-color: white;
   cursor: pointer;
+  display: inline-block;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
 `;
