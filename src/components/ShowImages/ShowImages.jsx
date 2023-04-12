@@ -82,7 +82,10 @@ class ShowImages extends Component {
     return (
       <>
         {!query && !images.length && (
-          <div>There are no images here but you can search for something</div>
+          <div style={{ width: '310px', margin: 'auto', marginTop: '200px' }}>
+            To start using this app please type your search query and press 🔍
+            button
+          </div>
         )}
         {isSubmited && images.length === 0 && (
           <p>Sorry but we did not find images for {query} </p>

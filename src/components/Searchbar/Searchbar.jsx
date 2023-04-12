@@ -1,7 +1,9 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Header, SearchInput, SearchButton } from './Searchbar.styled';
 import PropTypes from 'prop-types';
+import { FiSearch } from 'react-icons/fi';
 class Searchbar extends Component {
   state = {
     query: '',
@@ -25,13 +27,13 @@ class Searchbar extends Component {
   render() {
     const { query } = this.state;
     return (
-      <header>
+      <Header>
         <form onSubmit={this.handleSubmit}>
-          <button type="submit">
-            <span>Search</span>
-          </button>
+          <SearchButton type="submit">
+            <FiSearch />
+          </SearchButton>
 
-          <input
+          <SearchInput
             onChange={this.handleChange}
             value={query}
             type="text"
@@ -40,7 +42,7 @@ class Searchbar extends Component {
             placeholder="Search images and photos"
           />
         </form>
-      </header>
+      </Header>
     );
   }
 }
