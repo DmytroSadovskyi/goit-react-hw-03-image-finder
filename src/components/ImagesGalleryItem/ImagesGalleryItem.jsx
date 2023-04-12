@@ -10,13 +10,24 @@ class ImagesGalleryItem extends Component {
   openModal = () => this.setState({ isModalOpen: true });
   closeModal = () => this.setState({ isModalOpen: false });
   render() {
-    const { webformatURL, tags } = this.props;
+    const { webformatURL, tags, info } = this.props;
     const { isModalOpen } = this.state;
 
     return (
       <>
-        <GalleryImage src={webformatURL} alt={tags} onClick={this.openModal} />
-        {isModalOpen && <Modal onClose={this.closeModal} />}
+        <GalleryImage
+          src={webformatURL}
+          alt={tags}
+          info={info}
+          onClick={this.openModal}
+        />
+        {isModalOpen && (
+          <Modal
+            largeImageUrl={this.props.info.largeImageUrl}
+            tags={this.props.info.tags}
+            onClose={this.closeModal}
+          />
+        )}
       </>
     );
   }

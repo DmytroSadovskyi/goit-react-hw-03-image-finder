@@ -5,9 +5,13 @@ import PropTypes from 'prop-types';
 const ImagesGallery = ({ images }) => {
   return (
     <Gallery>
-      {images.map(({ webformatURL, tags }, index) => (
+      {images.map(({ webformatURL, tags, largeImageURL }, index) => (
         <GalleryItem key={index}>
-          <ImagesGalleryItem webformatURL={webformatURL} tags={tags} />
+          <ImagesGalleryItem
+            webformatURL={webformatURL}
+            tags={tags}
+            info={{ largeImageUrl: largeImageURL, tags }}
+          />
         </GalleryItem>
       ))}
     </Gallery>

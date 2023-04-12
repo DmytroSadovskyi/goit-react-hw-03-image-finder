@@ -7,6 +7,7 @@ export const ModalBackdrop = styled.div`
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
+  padding-bottom: 20px;
 `;
 
 export const ModalContent = styled.div`
@@ -14,9 +15,8 @@ export const ModalContent = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 600px;
-  width: 100%;
-  padding: 12px;
+  width: 65vw;
+  max-height: 850px;
   background-color: #fff;
   border-radius: 3px;
   box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
