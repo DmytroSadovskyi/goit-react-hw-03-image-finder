@@ -1,5 +1,7 @@
 import { Component } from 'react';
-
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import PropTypes from 'prop-types';
 class Searchbar extends Component {
   state = {
     query: '',
@@ -12,6 +14,10 @@ class Searchbar extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+
+    if (this.state.query.trim() === '') {
+      return toast.error('Please write your search query');
+    }
     this.props.onSubmit(this.state.query);
     this.setState({ query: '' });
   };
@@ -38,5 +44,9 @@ class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};
 
 export default Searchbar;
