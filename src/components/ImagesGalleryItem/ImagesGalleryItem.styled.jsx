@@ -20,5 +20,5 @@ export const GalleryImage = styled.img`
 export const Image = styled.img`
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
 `;
