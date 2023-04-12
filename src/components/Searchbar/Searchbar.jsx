@@ -1,7 +1,12 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Header, SearchInput, SearchButton } from './Searchbar.styled';
+import {
+  Header,
+  SearchForm,
+  SearchInput,
+  SearchButton,
+} from './Searchbar.styled';
 import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 class Searchbar extends Component {
@@ -28,7 +33,7 @@ class Searchbar extends Component {
     const { query } = this.state;
     return (
       <Header>
-        <form onSubmit={this.handleSubmit}>
+        <SearchForm onSubmit={this.handleSubmit}>
           <SearchButton type="submit">
             <BiSearch size={20} />
           </SearchButton>
@@ -41,7 +46,7 @@ class Searchbar extends Component {
             autoFocus
             placeholder="Search images and photos"
           />
-        </form>
+        </SearchForm>
       </Header>
     );
   }

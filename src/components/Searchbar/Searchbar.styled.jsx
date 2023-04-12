@@ -5,20 +5,37 @@ export const Header = styled.header`
   justify-content: center;
   align-items: center;
   background-color: yellowgreen;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  min-height: 64px;
+  padding: 8px 16px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 `;
 
-export const SearchInput = styled.input`
-  width: 250px;
-  border: none;
+export const SearchForm = styled.form`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 3px;
+  overflow: hidden;
   font-size: 20px;
 `;
 
-export const SearchButton = styled.button`
+export const SearchInput = styled.input`
+  display: inline-block;
+  width: 100%;
+  font-size: 20px;
+  border: none;
   height: 48px;
+
+  ::placeholder {
+    font-size: 18px;
+  }
+`;
+
+export const SearchButton = styled.button`
+  display: inline-block;
   width: 48px;
+  height: 48px;
   border: none;
   background-color: white;
   cursor: pointer;
