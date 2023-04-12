@@ -16,3 +16,10 @@ export const GalleryImage = styled.img`
     transform: scale(1.03);
   }
 `;
+
+export const Image = styled.img`
+  width: 100%;
+  height: auto;
+  height: 380px;
+  object-fit: cover;
+`;

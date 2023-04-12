@@ -3,7 +3,6 @@ import Searchbar from './Searchbar';
 import ShowImages from './ShowImages';
 import ScrollToTop from 'react-scroll-up';
 import Container from './Container/Container';
-import { AiOutlineArrowUp } from 'react-icons/ai';
 import { ToastContainer } from 'react-toastify';
 
 export default class App extends Component {
@@ -29,7 +28,7 @@ export default class App extends Component {
               borderRadius: '50%',
             }}
           >
-            <AiOutlineArrowUp style={{ fontSize: '25px' }} />
+            <span>UP</span>
           </ScrollToTop>
           <ToastContainer />
         </Container>
