@@ -5,6 +5,9 @@ import LoadMoreButton from 'components/Button';
 import Spinner from 'components/Loader/Loader';
 import PropTypes from 'prop-types';
 class ShowImages extends Component {
+  static propTypes = {
+    query: PropTypes.string.isRequired,
+  };
   state = {
     images: [],
     page: 0,
@@ -104,9 +107,5 @@ class ShowImages extends Component {
     );
   }
 }
-
-ShowImages.propTypes = {
-  query: PropTypes.string.isRequired,
-};
 
 export default ShowImages;

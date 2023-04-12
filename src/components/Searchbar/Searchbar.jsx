@@ -10,6 +10,9 @@ import {
 import PropTypes from 'prop-types';
 import { BiSearch } from 'react-icons/bi';
 class Searchbar extends Component {
+  static propTypes = {
+    onSubmit: PropTypes.func.isRequired,
+  };
   state = {
     query: '',
   };
@@ -51,9 +54,5 @@ class Searchbar extends Component {
     );
   }
 }
-
-Searchbar.propTypes = {
-  onSubmit: PropTypes.func.isRequired,
-};
 
 export default Searchbar;

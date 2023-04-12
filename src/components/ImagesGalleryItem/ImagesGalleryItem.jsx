@@ -3,6 +3,12 @@ import PropTypes from 'prop-types';
 import Modal from 'components/Modal';
 import { Component } from 'react';
 class ImagesGalleryItem extends Component {
+  static propTypes = {
+    webformatURL: PropTypes.string.isRequired,
+    largeImageURL: PropTypes.string,
+    tags: PropTypes.string.isRequired,
+  };
+
   state = {
     isModalOpen: false,
   };
@@ -32,11 +38,5 @@ class ImagesGalleryItem extends Component {
     );
   }
 }
-
-ImagesGalleryItem.propTypes = {
-  webformatURL: PropTypes.string.isRequired,
-  largeImageURL: PropTypes.string,
-  tags: PropTypes.string.isRequired,
-};
 
 export default ImagesGalleryItem;

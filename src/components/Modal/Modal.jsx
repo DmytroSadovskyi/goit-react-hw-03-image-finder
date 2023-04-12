@@ -7,6 +7,11 @@ import { Image } from 'components/ImagesGalleryItem/ImagesGalleryItem.styled';
 const modalRoot = document.querySelector('#modal-root');
 
 export default class Modal extends Component {
+  static propTypes = {
+    largeImageUrl: PropTypes.string.isRequired,
+    onClose: PropTypes.func.isRequired,
+  };
+
   componentDidMount() {
     window.addEventListener('keydown', this.handleKeyDown);
   }
@@ -39,8 +44,3 @@ export default class Modal extends Component {
     );
   }
 }
-
-Modal.propTypes = {
-  largeImageUrl: PropTypes.string.isRequired,
-  onClose: PropTypes.func.isRequired,
-};
