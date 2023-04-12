@@ -82,13 +82,17 @@ class ShowImages extends Component {
     return (
       <>
         {!query && !images.length && (
-          <div style={{ width: '310px', margin: 'auto', marginTop: '200px' }}>
-            To start using this app please type your search query and press 🔍
-            button
+          <div style={{ maxWidth: '280px', margin: 'auto' }}>
+            <p>
+              To start using this app please type your search query and press 🔍
+              button
+            </p>
           </div>
         )}
         {isSubmited && images.length === 0 && (
-          <p>Sorry but we did not find images for {query} </p>
+          <p style={{ maxWidth: '206px', margin: 'auto' }}>
+            Sorry but we did not find any images 😔 Please try again
+          </p>
         )}
         {images.length > 0 && <ImagesGallery images={images} />}
         {isLoading && <Spinner />}

@@ -30,7 +30,7 @@ export default class App extends Component {
           >
             <span>UP</span>
           </ScrollToTop>
-          <ToastContainer />
+          <ToastContainer autoClose={1000} />
         </Container>
       </>
     );
