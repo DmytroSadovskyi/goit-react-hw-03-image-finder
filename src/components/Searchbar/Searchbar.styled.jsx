@@ -43,7 +43,8 @@ export const SearchButton = styled.button`
   cursor: pointer;
 
   svg {
-    fill: green;
+    fill: currentColor;
+    font-size: 24px;
   }
 `;
 

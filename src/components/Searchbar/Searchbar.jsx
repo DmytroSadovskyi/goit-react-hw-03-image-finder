@@ -39,7 +39,7 @@ class Searchbar extends Component {
       <Header>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchButton type="submit" aria-label="search">
-            <HiMagnifyingGlass size="24" />
+            <HiMagnifyingGlass />
             <SearchButtonLabel>Search</SearchButtonLabel>
           </SearchButton>
 
