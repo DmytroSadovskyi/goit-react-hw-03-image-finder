@@ -34,10 +34,10 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   display: inline-block;
-
+  padding: 5px;
   width: 48px;
   height: 48px;
-  border: none;
+  border: 0;
   background-color: white;
   cursor: pointer;
 
