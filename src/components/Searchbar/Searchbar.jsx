@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import { HiMagnifyingGlass } from 'react-icons/hi2';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {
@@ -6,9 +7,9 @@ import {
   SearchForm,
   SearchInput,
   SearchButton,
+  SearchButtonLabel,
 } from './Searchbar.styled';
 import PropTypes from 'prop-types';
-import { BiSearch } from 'react-icons/bi';
 class Searchbar extends Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
@@ -38,7 +39,8 @@ class Searchbar extends Component {
       <Header>
         <SearchForm onSubmit={this.handleSubmit}>
           <SearchButton type="submit" aria-label="search">
-            <BiSearch size={24} />
+            <HiMagnifyingGlass size="24" />
+            <SearchButtonLabel>Search</SearchButtonLabel>
           </SearchButton>
 
           <SearchInput
