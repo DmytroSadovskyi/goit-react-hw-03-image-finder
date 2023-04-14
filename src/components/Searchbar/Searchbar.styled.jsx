@@ -33,9 +33,8 @@ export const SearchInput = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  display: inline-block;
+
   width: 48px;
   height: 48px;
   border: none;
